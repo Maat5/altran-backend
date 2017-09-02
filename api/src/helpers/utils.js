@@ -1,5 +1,5 @@
 
-const { chain, isArray, merge, forEach, isObjectLike } = require('lodash');
+const { chain, isArray, merge, forEach, isObjectLike, has } = require('lodash');
 let ErrorsMsg = require('./errors');
 let Utils = {};
 

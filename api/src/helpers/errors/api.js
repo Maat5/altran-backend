@@ -1,6 +1,5 @@
 
-const _ = require('lodash');
-const trans = require('i18n');
+const { get } = require('lodash');
 
 let errors = (key) => {
   let list = {
@@ -22,7 +21,7 @@ let errors = (key) => {
     }
   }
 
-  return _.get(list, key);
+  return get(list, key);
 };
 
 module.exports = errors;

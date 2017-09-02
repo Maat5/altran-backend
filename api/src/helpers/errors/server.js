@@ -12,7 +12,7 @@ let errors = (key, value) => {
       validations:{
         fields: {
           field: value,
-          message: trans.__('mongo.validations.fields')
+          message: 'Database validation error'
         },
         error: {
           message: 'The request can not be completed, try again',
