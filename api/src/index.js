@@ -1,8 +1,11 @@
 const express = require('express');
 const router = express.Router();
+const Auth = require('./authentication');
 const ParserError = require('./middlewares/errors');
 
 let Router = (app) => {
+  // auth
+  app.use('/auth', Auth);
   // 404 Route
   app.use((req, res) => {
     res.status(404).send({
