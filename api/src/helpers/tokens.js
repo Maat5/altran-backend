@@ -26,8 +26,9 @@ function generateToken(data, user, isEmail) {
  * @return {Object}
  */
 function validateToken(token, user) {
+  let payload = {}
   try {
-    let payload = jwt.decode(token, config.sessionToken);
+   payload = jwt.decode(token, config.sessionToken);
   } 
   catch (e) {
     return {
