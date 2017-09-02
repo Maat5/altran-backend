@@ -1,7 +1,7 @@
 const UserController = require('./users');
 const express = require('express');
 const router = express.Router();
-const { Verify , User, Admin } = require('../middlewares/oauth');
+const { Verify , User } = require('../middlewares/oauth');
 
 //asign middleware to all users endpoints
 router.use(Verify);
