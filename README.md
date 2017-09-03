@@ -1,9 +1,8 @@
 # Altran RESTful API Test
-___
 
 ### What do you need to execute this app?
 
-* [node.js] - evented I/O for the backend
+* [node.js] v6.11.2 - evented I/O for the backend
 
 ```sh
  curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
@@ -12,7 +11,7 @@ ___
  sudo apt-get install -y build-essential
 ```
 
-* [mongo] - Mongo is document dabatase
+* [mongo] v3.2.16 - Mongo is document dabatase
 
 ```sh
 sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv EA312927
