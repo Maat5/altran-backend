@@ -10,28 +10,7 @@ router.use(Verify);
 module.exports = router;
 
 /**
- * @api {post} /policies/id/:id Find by Id
- * @apiVersion 1.0.0
- *
- * @apiName policeById
- * @apiGroup Policies
- *
- * @apiParam {String} policeNumber police id 
- *
- * @apiParamExample {Object} Id example
- *  http://localhost:8080/policies/id/64cceef9-3a01-49ae-a23b-3761b604800b
- *
- * @apiPermission admin
- * @apiUse InvalidHeader
- * @apiUse InvalidHeaderToken
- * @apiUse WontExistsPolice
- * @apiUse Errors
- * @apiUse PoliciesById
- */
-router.get('/id/:policeNumber', Admin, PoliciesController.findById);
-
-/**
- * @api {post} /policies/filter/ Find by name
+ * @api {post} /policies/ Find by name
  * @apiVersion 1.0.0
  *
  * @apiName policeByName
@@ -40,7 +19,7 @@ router.get('/id/:policeNumber', Admin, PoliciesController.findById);
  * @apiParam {String} name user name to filter data
  *
  * @apiParamExample {Object} Name example
- *  http://localhost:8080/policies/filter/?name=man
+ *  http://localhost:8080/policies/?name=man
  *
  * @apiPermission admin
  * @apiUse InvalidHeader
@@ -48,4 +27,25 @@ router.get('/id/:policeNumber', Admin, PoliciesController.findById);
  * @apiUse Errors
  * @apiUse PoliciesByName
  */
-router.get('/filter/', Admin, PoliciesController.findUsers);
+router.get('/', Admin, PoliciesController.findUsers);
+
+/**
+ * @api {post} /policies/:id Find by Id
+ * @apiVersion 1.0.0
+ *
+ * @apiName policeById
+ * @apiGroup Policies
+ *
+ * @apiParam {String} policeNumber police id 
+ *
+ * @apiParamExample {Object} Id example
+ *  http://localhost:8080/policies/64cceef9-3a01-49ae-a23b-3761b604800b
+ *
+ * @apiPermission admin
+ * @apiUse InvalidHeader
+ * @apiUse InvalidHeaderToken
+ * @apiUse WontExistsPolice
+ * @apiUse Errors
+ * @apiUse PoliciesById
+ */
+router.get('/:policeNumber', Admin, PoliciesController.findById);
