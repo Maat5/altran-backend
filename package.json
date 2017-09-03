@@ -7,7 +7,8 @@
   "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "NODE_ENV=development PROCESS_TYPE=api ./node_modules/.bin/nodemon index.js"
+    "start": "NODE_ENV=development PROCESS_TYPE=api ./node_modules/.bin/nodemon index.js",
+    "doc": "./node_modules/.bin/apidoc -i api/ -o docs"
   },
   "license": "ISC",
   "dependencies": {
@@ -33,6 +34,7 @@
     "winston": "2.3.1"
   },
   "devDependencies": {
+    "apidoc": "0.17.6",
     "nodemon": "1.11.0"
   }
 }

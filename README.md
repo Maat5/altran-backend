@@ -70,6 +70,11 @@ module.exports = {
 $  npm start
 ```
 
+### Generate documentation
+```sh
+$  npm run doc
+```
+
 [node.js]: <http://nodejs.org>
 [Npm]: <https://www.npmjs.com/>
 [mongo]: <https://docs.mongodb.com/manual/tutorial/install-mongodb-on-ubuntu/>

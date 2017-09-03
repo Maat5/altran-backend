@@ -9,6 +9,7 @@ module.exports = (err, req, res, next) => {
       }
     };
 
+    console.log(err)
     let errorType = err.status === 400 && err.name === 'SyntaxError' && err.body ? 
       getFields(400, 'invalidJson') : err.status === 404 ? 
       getFields(404, 'notFound') : getFields(500, 'internal');
